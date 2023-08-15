@@ -17,9 +17,12 @@ function rep(){
         }
        
     });
-    console.log(urlList)
+    if(urlList.length >0){
     reproductor.src = urlList[con]
     reproductor.play()
+    }else{
+        alert("lo sentimos pero no hay niguna palabra de la frase en nuestra base de datos")
+    }
     reproductor.addEventListener("ended", function() {
         console.log("El video ha terminado de reproducirse.");
         con++

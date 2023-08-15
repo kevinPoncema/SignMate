@@ -6,19 +6,41 @@
     <title>Dvideo_als</title>
     <script src="main.js"></script>
 </head>
-<body>
+    <div class="formulario">
     <form action="">
         <label for="txt">frace</label>
         <input type="text" id="txt">
-        <button type="button" id="playButton" onclick="rep()">Reproducir Vídeo</button>
-        
+        <button type="button" id="playButton" onclick="rep()">Reproducir</button>
         <button type="button" ><a href="camara.html">detectar</a></button>
         
     </form>
-    <video id="reproductor" controls height="75%" width="65%">
+</div>
+    <div class="vip">
+    <video id="reproductor" controls >
         <source src="" type="video/mp4" hidden =250 w>
         Tu navegador no soporta el elemento de video.
     </video>
-  
+</div>
+  <style>
+    .formulario{
+        display: grid;
+        place-items: center;
+        margin-top: 5%;
+        height: 85%;
+        width: 85%;
+        max-width: 700px;
+        min-width: 350px;
+        padding-left: 4%;
+   }
+   .vip{
+    display: flex;
+    padding-left: 18%;
+    margin-top: 4%;
+ 
+   }
+   body{
+    background-color: black;
+   }
+  </style>
 </body>
 </html>
