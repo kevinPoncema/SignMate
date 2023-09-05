@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Video</title>
+    <script src="palabras.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        video {
+            width: 640px; /* Ancho fijo del video */
+            height: 360px; /* Alto fijo del video */
+            display: block;
+            margin: 0 auto; /* Centrar horizontalmente */
+        }
+
+        select {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <video id="reproductor" controls>
+        <source src="" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <select id="palabras">
+        <!-- Aquí puedes agregar las opciones del select desde tu archivo palabras.js -->
+    </select>
+</body>
+</html>

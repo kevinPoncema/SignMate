@@ -6,40 +6,57 @@
     <title>Dvideo_als</title>
     <script src="main.js"></script>
 </head>
+<body>
     <div class="formulario">
-    <form action="">
-        <label for="txt">frace</label>
-        <input type="text" id="txt">
-        <button type="button" id="playButton" onclick="rep()">Reproducir</button>
-        
-    </form>
-</div>
+        <form action="">
+            <label for="txt">Frase</label>
+            <input type="text" id="txt">
+            <button type="button" id="playButton" onclick="rep()">Reproducir</button>
+        </form>
+    </div>
+    <p id="eti">Palabra</p>
     <div class="vip">
-    <video id="reproductor" controls >
-        <source src="" type="video/mp4" hidden =250 w>
-        Tu navegador no soporta el elemento de video.
-    </video>
-</div>
-  <style>
-    .formulario{
-        display: grid;
-        place-items: center;
-        margin-top: 5%;
-        height: 85%;
-        width: 85%;
-        max-width: 700px;
-        min-width: 350px;
-        padding-left: 4%;
-   }
-   .vip{
-    display: flex;
-    padding-left: 18%;
-    margin-top: 4%;
- 
-   }
-   body{
-    background-color: black;
-   }
-  </style>
+        <div class="video-container">
+            <video id="reproductor" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+  
+    <style>
+        .formulario {
+            display: grid;
+            place-items: center;
+            margin-top: 5%;
+            height: 85%;
+            width: 85%;
+            max-width: 700px;
+            min-width: 350px;
+            padding-left: 4%;
+        }
+
+        .vip {
+            display: flex;
+            justify-content: center; /* Centrar el contenido horizontalmente */
+            align-items: center; /* Centrar el contenido verticalmente */
+            margin-top: 4%;
+        }
+
+        .video-container {
+            max-width: 80%; /* El video no excederá el ancho del contenedor */
+            max-height: 80vh; /* El video no excederá la altura de la ventana */
+        }
+
+        body {
+            background-color: black;
+            margin: 0; /* Eliminar margen predeterminado */
+        }
+
+        video {
+            width: 80%; /* El video ocupará todo el ancho del contenedor */
+            height: 80%; /* El video ocupará todo el alto del contenedor */
+        }
+    </style>
 </body>
 </html>

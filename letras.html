@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="reproductor" controls>
+        <source src="" type="video/mp4" hidden="250">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <br>
+    
+    <!-- Botones para cada letra del alfabeto inglés -->
+    <div>
+        <button onclick="pal('A')">A</button>
+        <button onclick="pal('B')">B</button>
+        <button onclick="pal('C')">C</button>
+        <button onclick="pal('D')">D</button>
+        <button onclick="pal('E')">E</button>
+        <button onclick="pal('F')">F</button>
+        <button onclick="pal('G')">G</button>
+        <button onclick="pal('H')">H</button>
+        <button onclick="pal('I')">I</button>
+        <button onclick="pal('J')">J</button>
+        <button onclick="pal('K')">K</button>
+        <button onclick="pal('L')">L</button>
+        <button onclick="pal('M')">M</button>
+        <button onclick="pal('N')">N</button>
+        <button onclick="pal('O')">O</button>
+        <br>
+        <button onclick="pal('P')">P</button>
+        <button onclick="pal('Q')">Q</button>
+        <button onclick="pal('R')">R</button>
+        <button onclick="pal('S')">S</button>
+        <button onclick="pal('T')">T</button>
+        <button onclick="pal('U')">U</button>
+        <button onclick="pal('V')">V</button>
+        <button onclick="pal('W')">W</button>
+        <button onclick="pal('X')">X</button>
+        <button onclick="pal('Y')">Y</button>
+        <button onclick="pal('Z')">Z</button>
+    </div>
+    <script>
+        const letr = new Map([
+            ["A", "videos/LtA.mp4"],
+            ["B", "videos/LtB.mp4"],
+            ["C", "videos/LtC.mp4"],
+            ["D", "videos/LtD.mp4"],
+            ["E", "videos/LtE.mp4"],
+            ["F", "videos/LtF.mp4"],
+            ["G", "videos/LtG.mp4"],
+            ["H", "videos/LtH.mp4"],
+            ["I", "videos/LtI.mp4"],
+            ["J", "videos/LtJ.mp4"], // Coma faltante aquí
+            ["K", "videos/LtK.mp4"],
+            ["L", "videos/LtL.mp4"],
+            ["M", "videos/LtM.mp4"],
+            ["N", "videos/LtN.mp4"],
+            ["O", "videos/LtO.mp4"],
+            ["P", "videos/LtP.mp4"],
+            ["Q", "videos/LtQ.mp4"],
+            ["R", "videos/LtR.mp4"],
+            ["S", "videos/LtS.mp4"],
+            ["T", "videos/LtT.mp4"],
+            ["U", "videos/LtU.mp4"],
+            ["V", "videos/LtV.mp4"],
+            ["W", "videos/LtW.mp4"],
+            ["X", "videos/LtX.mp4"],
+            ["Y", "videos/LtY.mp4"],
+            ["Z", "videos/LtZ.mp4"]
+        ]);
+
+        var rep = document.getElementById("reproductor");
+
+        function pal(letra) {
+            rep.src = letr.get(letra);
+        }
+    </script>
+</body>
+</html>
+
+
+
