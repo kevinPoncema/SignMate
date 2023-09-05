@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dvideo_als</title>
     <script src="main.js"></script>
-</head>
-<body>
-    <div class="formulario">
-        <form action="">
-            <label for="txt">Frase</label>
-            <input type="text" id="txt">
-            <button type="button" id="playButton" onclick="rep()">Reproducir</button>
-        </form>
-    </div>
-    <p id="eti">Palabra</p>
-    <div class="vip">
-        <div class="video-container">
-            <video id="reproductor" controls>
-                <source src="" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-    </div>
-  
     <style>
+        /* Estilos para la barra de menú */
+        nav {
+            background-color: #333; /* Color de fondo de la barra de menú */
+            color: white; /* Color de texto en la barra de menú */
+            padding: 10px 0; /* Espaciado interno en la barra de menú */
+            text-align: center; /* Centrar texto en la barra de menú */
+        }
+
+        nav a {
+            text-decoration: none; /* Eliminar subrayado de los enlaces */
+            color: white; /* Color de texto de los enlaces */
+            margin: 0 20px; /* Espaciado entre los enlaces */
+        }
+
+        /* Estilos para el contenido principal */
         .formulario {
             display: grid;
             place-items: center;
@@ -58,5 +54,32 @@
             height: 80%; /* El video ocupará todo el alto del contenedor */
         }
     </style>
+</head>
+<body>
+    <!-- Barra de menú -->
+    <nav>
+        <a href="palatras.html">Palabra</a>
+        <a href="letras.html">Letras</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="formulario">
+        <form action="">
+            <label for="txt">Frase</label>
+            <input type="text" id="txt">
+            <button type="button" id="playButton" onclick="rep()">Reproducir</button>
+        </form>
+    </div>
+    <p id="eti">Palabra</p>
+    <div class="vip">
+        <div class="video-container">
+            <video id="reproductor" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
 </body>
 </html>
+
+

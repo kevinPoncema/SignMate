@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reproductor de Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        video {
+            width: 640px; /* Ancho fijo del video */
+            height: 360px; /* Alto fijo del video */
+            display: block;
+            margin: 0 auto; /* Centrar horizontalmente */
+        }
+
+        select {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Barra de menú -->
+    <nav>
+        <ul>
+            <li><a href="palatras.html">Palabras</a></li>
+            <li><a href="index.html">Mensaje</a></li>
+        </ul>
+    </nav>
+    
     <video id="reproductor" controls>
         <source src="" type="video/mp4" hidden="250">
         Tu navegador no soporta el elemento de video.
@@ -53,7 +109,7 @@
             ["G", "videos/LtG.mp4"],
             ["H", "videos/LtH.mp4"],
             ["I", "videos/LtI.mp4"],
-            ["J", "videos/LtJ.mp4"], // Coma faltante aquí
+            ["J", "videos/LtJ.mp4"],
             ["K", "videos/LtK.mp4"],
             ["L", "videos/LtL.mp4"],
             ["M", "videos/LtM.mp4"],
@@ -80,6 +136,7 @@
     </script>
 </body>
 </html>
+
 
 
 
