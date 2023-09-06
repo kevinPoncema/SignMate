@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
         ["hola", "videos/Hola_2.mp4"],
         ["bienvenido", "videos/Bienvenido.mkv"],
         ["para", "videos/Parar.mkv"],
-        ["papa", "videos/papa.mp4"]
+        ["papa", "videos/papa.mp4"],
+        ["bien", "videos/bien.mp4"],
+        ["no", "videos/no.mp4"]
     ]);
     //se coloclocan todas las claves  en un arreglo
     let claves = Array.from(palabras.keys());

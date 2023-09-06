@@ -2,7 +2,10 @@ var palRut = {
     "hola": "videos/Hola_2.mp4",
     "papa": "videos/papa.mp4",
     "bienvenido": "videos/Bienvenido.mkv",
-    "para": "videos/Parar.mkv"
+    "para": "videos/Parar.mkv",
+    "bien": "videos/bien.mp4",
+    "no": "videos/no.mp4",
+
     // Agrega más entradas para otras palabras aquí
 };
 
