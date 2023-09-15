@@ -1,5 +1,5 @@
 var palRut = {
-    "hola": "videos/Hola_2.mp4",
+    "hola": "videos/hola.mp4",
     "papa": "videos/papa.mp4",
     "bienvenido": "videos/Bienvenido.mkv",
     "para": "videos/Parar.mkv",
@@ -44,5 +44,6 @@ function rep() {
         }
     });
 }
+
 
 

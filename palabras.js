@@ -1,34 +1,50 @@
-//se crea u evento que se ejecuta cuando se carga el documento
+// Esta función se ejecuta cuando se carga el documento
 document.addEventListener("DOMContentLoaded", function() {
-   //se crea un mapa con las palabras como clave y las rutas de las animaciones como  valor
+
+    // Crea un mapa con las palabras como clave y las rutas de las animaciones como valor
     const palabras = new Map([
-        ["hola", "videos/Hola_2.mp4"],
-        ["bienvenido", "videos/Bienvenido.mkv"],
-        ["para", "videos/Parar.mkv"],
-        ["papa", "videos/papa.mp4"],
-        ["bien", "videos/bien.mp4"],
-        ["no", "videos/no.mp4"]
+      ["hola", "videos/Hola.mp4"],
+      ["bienvenido", "videos/Bienvenido.mkv"],
+      ["para", "videos/Parar.mkv"],
+      ["papa", "videos/papa.mp4"],
+      ["bien", "videos/bien.mp4"],
+      ["no", "videos/no.mp4"],
+      ["si", "videos/si.mp4"],
+      ["perdon", "videos/perdon.mp4"],
+      ["vender", "videos/pal.mp4"]
     ]);
-    //se coloclocan todas las claves  en un arreglo
-    let claves = Array.from(palabras.keys());
-    let select = document.getElementById("palabras"); // se llama al secet
-    //se usa un foreach para recorer cada elemento del arreglo
-    claves.forEach(clave => {//se agregan las opciones modiiifcando el domm
-        let option = document.createElement("option");
-        option.value = clave;
-        option.text = clave;
-        select.appendChild(option);
+  
+    // Crea un arreglo con todas las claves del mapa
+    const claves = Array.from(palabras.keys());
+  
+    // Obtiene el elemento de la selección
+    const select = document.getElementById("palabras");
+  
+    // Agrega las opciones al elemento de la selección
+    claves.forEach(clave => {
+      const option = document.createElement("option");
+      option.value = clave;
+      option.text = clave;
+      select.appendChild(option);
     });
-    var rep = document.getElementById("reproductor")
-    // Agrega un evento que se llama al selecionar una opcion
-select.addEventListener("change", function() {
-    // Obtiene el valor seleccionado
-    const seleccion = select.value;
-    
-    // Realiza la acción deseada
-    rep.src = palabras.get(seleccion);
-    alert(`Has seleccionado: ${seleccion}`);
-});
-});
+  
+    // Obtiene el elemento del reproductor
+    const reproductor = document.getElementById("reproductor");
+  
+    // Agrega un evento de cambio al elemento de la selección
+    select.addEventListener("change", function() {
+  
+      // Obtiene el valor seleccionado
+      const seleccion = select.value;
+  
+      // Establece la fuente del reproductor
+      reproductor.src = palabras.get(seleccion);
+  
+      // Muestra un mensaje de alerta con el valor seleccionado
+      alert(`Has seleccionado: ${seleccion}`);
+    });
+  });
+  
+  
 
 

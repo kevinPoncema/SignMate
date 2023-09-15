@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dvideo_als</title>
+    <title>video_als</title>
     <script src="main.js"></script>
     <style>
-        /* Estilos para la barra de menú */
-        nav {
-            background-color: #333; /* Color de fondo de la barra de menú */
-            color: white; /* Color de texto en la barra de menú */
-            padding: 10px 0; /* Espaciado interno en la barra de menú */
-            text-align: center; /* Centrar texto en la barra de menú */
+        /* Estilos para el encabezado y la barra de menú */
+        header {
+            background-color: #333; /* Color de fondo del encabezado */
+            color: white; /* Color de texto en el encabezado */
+            padding: 10px 0; /* Espaciado interno en el encabezado */
+            text-align: center; /* Centrar texto en el encabezado */
         }
 
-        nav a {
+        header nav {
+            margin: 0; /* Eliminar margen predeterminado en el menú */
+        }
+
+        header a {
             text-decoration: none; /* Eliminar subrayado de los enlaces */
             color: white; /* Color de texto de los enlaces */
             margin: 0 20px; /* Espaciado entre los enlaces */
@@ -22,15 +26,25 @@
 
         /* Estilos para el contenido principal */
         .formulario {
-            display: grid;
-            place-items: center;
-            margin-top: 5%;
-            height: 85%;
-            width: 85%;
-            max-width: 700px;
-            min-width: 350px;
-            padding-left: 4%;
-        }
+        display: grid;
+        place-items: center;
+        margin-top: 5%;
+    }
+
+    #txt {
+        width: 80%;
+    }
+
+    #playButton {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: block; /* Hacer que el botón sea un bloque */
+        margin: 20px auto; /* Centrar horizontalmente */
+    }
+
 
         .vip {
             display: flex;
@@ -40,8 +54,8 @@
         }
 
         .video-container {
-            max-width: 80%; /* El video no excederá el ancho del contenedor */
-            max-height: 80vh; /* El video no excederá la altura de la ventana */
+            max-width: 90; /* El video no excederá el ancho del contenedor */
+            max-height: 90vh; /* El video no excederá la altura de la ventana */
         }
 
         body {
@@ -50,17 +64,19 @@
         }
 
         video {
-            width: 80%; /* El video ocupará todo el ancho del contenedor */
-            height: 80%; /* El video ocupará todo el alto del contenedor */
+            width: 100%; /* El video ocupará todo el ancho del contenedor */
+            height: auto; /* El alto se ajustará automáticamente */
         }
     </style>
 </head>
 <body>
     <!-- Barra de menú -->
-    <nav>
-        <a href="palatras.html">Palabra</a>
-        <a href="letras.html">Letras</a>
-    </nav>
+    <header>
+        <nav>
+            <a href="palabras.html">Palabras</a>
+            <a href="letras.html">Letras</a>
+        </nav>
+    </header>
 
     <!-- Contenido principal -->
     <div class="formulario">
