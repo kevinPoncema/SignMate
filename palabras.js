@@ -11,8 +11,28 @@ document.addEventListener("DOMContentLoaded", function() {
       ["no", "videos/no.mp4"],
       ["si", "videos/si.mp4"],
       ["perdon", "videos/perdon.mp4"],
-      ["vender", "videos/pal.mp4"]
-    ]);
+      ["vender", "videos/pal.mp4"],
+      ["gato", "videos/gato.mp4"],
+      ["vender", "videos/hermoso.mp4"],
+      ["vender", "videos/amigo.mp4"],
+      ["hermoso", "videos/hermoso.mp4"],
+      ["sol", "videos/sol.mp4"],
+      ["auto", "videos/auto.mp4"],
+      ["casa", "videos/casa.mp4"],
+      ["auto", "videos/auto.mp4"],
+      ["novio", "videos/novio.mp4"],
+      ["novio", "videos/novio.mp4"],
+      ["novia", "videos/novia.mp4"],
+      ["abuela", "videos/abuela.mp4"],
+      ["abuelo", "videos/abuela.mp4"],
+      ["esperar", "videos/seperar.mp4"],
+      ["ayuda", "videos/ayuda.mp4"],
+      ["comida", "videos/comida.mp4"],
+      ["nostros", "videos/comida.mp4"],
+      ["madre", "videos/madre.mp4"],
+      ["padre", "videos/padre.mp4"],
+      ["nostros", "videos/comida.mp4"],
+  ]);
   
     // Crea un arreglo con todas las claves del mapa
     const claves = Array.from(palabras.keys());

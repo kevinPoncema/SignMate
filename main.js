@@ -1,49 +1,87 @@
-var palRut = {
-    "hola": "videos/hola.mp4",
-    "papa": "videos/papa.mp4",
-    "bienvenido": "videos/Bienvenido.mkv",
-    "para": "videos/Parar.mkv",
-    "bien": "videos/bien.mp4",
-    "no": "videos/no.mp4",
+const palabras = new Map([
+    ["hola", "videos/Hola.mp4"],
+    ["bienvenido", "videos/Bienvenido.mkv"],
+    ["para", "videos/Parar.mkv"],
+    ["papa", "videos/papa.mp4"],
+    ["bien", "videos/bien.mp4"],
+    ["no", "videos/no.mp4"],
+    ["si", "videos/si.mp4"],
+    ["perdon", "videos/perdon.mp4"],
+    ["vender", "videos/pal.mp4"],
+    ["gato", "videos/gato.mp4"],
+    ["vender", "videos/hermoso.mp4"],
+    ["vender", "videos/amigo.mp4"],
+    ["hermoso", "videos/hermoso.mp4"],
+    ["sol", "videos/sol.mp4"],
+    ["auto", "videos/auto.mp4"],
+    ["casa", "videos/casa.mp4"],
+    ["auto", "videos/auto.mp4"],
+    ["novio", "videos/novio.mp4"],
+    ["novio", "videos/novio.mp4"],
+    ["novia", "videos/novia.mp4"],
+    ["abuela", "videos/abuela.mp4"],
+    ["abuelo", "videos/abuela.mp4"],
+    ["esperar", "videos/seperar.mp4"],
+    ["ayuda", "videos/ayuda.mp4"],
+    ["comida", "videos/comida.mp4"],
+    ["nostros", "videos/comida.mp4"],
+    ["madre", "videos/madre.mp4"],
+    ["padre", "videos/padre.mp4"],
+    ["nostros", "videos/comida.mp4"],
+]);
 
-    // Agrega más entradas para otras palabras aquí
-};
+let con = 0;
+let played = false;
+let urlList = [];
 
 function rep() {
-    var reproductor = document.getElementById("reproductor");
-    let txt = document.getElementById("txt").value;
-    let list = txt.split(" ");
+    const reproductor = document.getElementById("reproductor");
+    const txt = document.getElementById("txt").value;
+    const list = txt.split(" ");
     console.log(list);
-    var urlList = [];
-    var con = 0;
+    
+    urlList = [];
+    con = 0;
 
     list.forEach(element => {
-        if (palRut[element]) {
-            urlList.push(palRut[element]);
-        } else {
-            alert("No hay una demostración de " + element + " en nuestra base de datos. Lo siento :(");
+        if (palabras.has(element)) {
+            urlList.push(palabras.get(element));
         }
     });
 
     if (urlList.length > 0) {
         reproductor.src = urlList[con];
-        reproductor.play();
+        played = false;
     } else {
         alert("Lo sentimos, pero no hay ninguna palabra de la frase en nuestra base de datos.");
     }
 
     reproductor.addEventListener("ended", function() {
-        console.log("El video ha terminado de reproducirse.");
         con++;
         if (con < urlList.length) {
             reproductor.src = urlList[con];
-            reproductor.play();
+            played = false;
         } else {
             con = 0;
-            urlList = [];
+            urlList = []
+        }
+   
+    });
+
+    reproductor.addEventListener("loadeddata", function() {
+        console.log(con)
+        if (!played) {
+            reproductor.play();
+            played = true;
         }
     });
 }
+
+
+
+
+
+
 
 
 
