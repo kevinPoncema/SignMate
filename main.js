@@ -36,7 +36,7 @@ let urlList = [];
 
 function rep() {
     const reproductor = document.getElementById("reproductor");
-    const txt = document.getElementById("txt").value;
+    const txt = document.getElementById("txt").value.toLowerCase();
     const list = txt.split(" ");
     console.log(list);
     
@@ -76,10 +76,23 @@ function rep() {
         }
     });
 }
+//se cre un objecto de reconocimiento de voz
+const recognition = new webkitSpeechRecognition();
+//se cre un evento para prosesar el resultadp
+recognition.onresult = (event) => {
+    // Se ha recibido un resultado de reconocimiento de voz.
+    const transcript = event.results[0][0].transcript;
+    //se muestra en consola 
+    console.log(transcript);
+    //se le asigna el texto a un input
+    const input = document.getElementById("txt");
+    input.value = transcript
+    rep();
+  };
 
-
-
-
+function  onRecognition() {
+    recognition.start();  
+}
 
 
 
